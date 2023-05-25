@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="p-3">
+        <h6>Post a comment</h6>
+    </div>
+    <form class="p-3" [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+            <label for="userName" class="form-label">Name *</label>
+            <input type="text" class="form-control" id="userName" [ngClass]="{'validation-error': commentForm.get('name')?.invalid && (commentForm.get('name')?.dirty || commentForm.get('name')?.touched)}" formControlName="name" />
+        </div>
+
+        <div class="mb-3">
+            <label for="commentText" class="form-label">Comment *</label>
+            <textarea class="form-control" id="commentText" [ngClass]="{'validation-error': commentForm.get('comment')?.invalid && (commentForm.get('comment')?.dirty || commentForm.get('comment')?.touched)}" rows="20" formControlName="comment"></textarea>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button class="btn btn=lg btn-primary" [disabled]="!commentForm.valid" type="submit">{{btnText}}</button>
+            <button class="btn btn=lg btn-primary" type="button" (click)="onClickCancel()">Cancel</button>
+        </div>
+    </form>
+</div>

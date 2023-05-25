@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="p-3">
+        <h6>Comments</h6>
+    </div>
+    <div class="mt-2" *ngIf="!comments.length">
+        <div class="d-flex flex-row p-3">
+            <div class="w-100">
+                <span>No Comments Found</span>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="mt-2" *ngFor="let comment of comments; let i = index;">
+        <div class="d-flex flex-row p-3">
+            <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex flex-row align-items-center">
+                        <span class="mr-2 user-title">{{ comment.name }}</span>
+                    </div>
+                    <small>{{ comment.comment_on | date }}</small>
+                </div>
+
+                <p class="text-justify comment-text mb-0">
+                    {{ comment.comment_text }}
+                </p>
+
+                <div class="d-flex flex-row user-feed">
+                    <a href="javascript:" (click)="onClickEdit(comment)">Edit</a>
+                    <a href="javascript:" (click)="onClickDelete(comment)">Delete</a>
+                    <a href="javascript:" (click)="onClickReply(comment)">Reply</a>
+                </div>
+
+                <div class="comment-replies">
+                    <div class="reply" *ngFor="let reply of comment.replies;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center">
+                                <span class="mr-2 user-title">{{reply.name}}</span>
+                            </div>
+                            <small>{{ reply.reply_on | date }}</small>
+                        </div>
+
+                        <p class="text-justify comment-text mb-0">
+                            {{ reply.reply_text }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

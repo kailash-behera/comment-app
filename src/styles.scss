@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #eee
+}
+
+.card {
+    background-color: #fff;
+    border: none
+}
+
+.form-color {
+    background-color: #fafafa
+}
+
+.form-control {
+    height: 48px;
+    border-radius: 25px;
+    text-indent: 10px;
+}
+
+textarea {
+    height: 100px !important;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #35b69f;
+    outline: 0;
+    box-shadow: none;
+
+}
+
+.validation-error {
+    border-color: red !important;
+}
+
+.comment-text {
+    font-size: 13px
+}
+
+.wish {
+    color: #35b69f;
+}
+
+.user-title {
+    color: #35b69f;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.user-feed {
+    font-size: 14px;
+    margin-top: 12px
+}
+
+.user-feed>a {
+    margin-right: 10px;
+    text-decoration-line: none;
+    color: #73b1a1;
+}
+
+.btn {
+    border-radius: 1.5rem;
+    background: #5eb3a0;
+    border-color: #59a893;
+}
+
+.btn:disabled {
+    background-color: #70b6bb;
+    border-color: #70b6bb;
+}
+
+.btn:hover {
+    background: #5eb3a0;
+    border-color: #59a893;
+}

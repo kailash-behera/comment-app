@@ -1,0 +1,10 @@
+<div class="container mt-5 mb-5">
+    <div class="row height d-flex ">
+        <div class="col-md-6">
+            <app-comment-form [comment]="comment" (formEmit)="onFormEmit($event)"></app-comment-form>
+        </div>
+        <div class="col-md-6">
+            <app-comment-list [comments]="comments" (commentEvent)="onCommentEmit($event)"></app-comment-list>
+        </div>
+    </div>
+</div>
