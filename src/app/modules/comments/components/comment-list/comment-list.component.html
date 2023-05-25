@@ -18,12 +18,10 @@
                     <div class="d-flex flex-row align-items-center">
                         <span class="mr-2 user-title">{{ comment.name }}</span>
                     </div>
-                    <small>{{ comment.comment_on | date }}</small>
+                    <small class="duration">{{ comment.comment_on | timeDuration }}</small>
                 </div>
 
-                <p class="text-justify comment-text mb-0">
-                    {{ comment.comment_text }}
-                </p>
+                <p class="text-justify comment-text mb-0" [innerHTML]="comment.comment_text"></p>
 
                 <div class="d-flex flex-row user-feed">
                     <a href="javascript:" (click)="onClickEdit(comment)">Edit</a>
@@ -37,12 +35,10 @@
                             <div class="d-flex flex-row align-items-center">
                                 <span class="mr-2 user-title">{{reply.name}}</span>
                             </div>
-                            <small>{{ reply.reply_on | date }}</small>
+                            <small class="duration">{{ reply.reply_on | timeDuration }}</small>
                         </div>
 
-                        <p class="text-justify comment-text mb-0">
-                            {{ reply.reply_text }}
-                        </p>
+                        <p class="text-justify comment-text mb-0" [innerHTML]="reply.reply_text"></p>
                     </div>
                 </div>
             </div>

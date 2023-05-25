@@ -12,5 +12,6 @@ export interface IFormValue {
     name: string,
     comment_text: string,
     type: 'comment' | 'reply',
-    action: string
+    action: string,
+    comment?: IComment
 }

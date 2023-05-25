@@ -4,10 +4,13 @@ import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TimeDurationPipe } from './pipes/time-duration.pipe';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TimeDurationPipe
+  ],
   imports: [
     CommonModule,
     SharedRoutingModule,
@@ -16,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   exports: [
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TimeDurationPipe
   ]
 })
 export class SharedModule { }

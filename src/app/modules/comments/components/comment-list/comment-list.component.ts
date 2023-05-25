@@ -21,7 +21,8 @@ export class CommentListComponent implements OnInit {
       name: comment.name,
       comment_text: comment.comment_text,
       type: 'comment',
-      action: 'edit'
+      action: 'edit',
+      comment: comment
     });
   }
 
@@ -32,7 +33,8 @@ export class CommentListComponent implements OnInit {
         name: comment.name,
         comment_text: comment.comment_text,
         type: 'comment',
-        action: 'delete'
+        action: 'delete',
+        comment: comment
       });
     }
   }
@@ -43,7 +45,8 @@ export class CommentListComponent implements OnInit {
       name: comment.name,
       comment_text: comment.comment_text,
       type: 'reply',
-      action: 'post'
+      action: 'post',
+      comment: comment
     });
   }
 }

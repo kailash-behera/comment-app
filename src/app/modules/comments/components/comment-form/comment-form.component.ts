@@ -36,6 +36,14 @@ export class CommentFormComponent implements OnInit {
 
   }
 
+  getHeading(): string {
+    if (this.commentForm.get('type')?.value == "reply") {
+      return `Reply to ${this.comment.comment?.name}`
+    }
+
+    return `${this.commentForm.get('id')?.value ? 'Update' : 'Post'} Comment`;
+  }
+
   onSubmit() {
     const { id, type } = this.commentForm.value;
 

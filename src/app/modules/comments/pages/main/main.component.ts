@@ -34,7 +34,8 @@ export class MainComponent implements OnInit {
         name: '',
         comment_text: '',
         type: 'reply',
-        action: 'post'
+        action: 'post',
+        comment: comment.comment
       }
     }
     else {
