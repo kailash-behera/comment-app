@@ -8,13 +8,6 @@ export class TimeDurationPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
 
-    const timeZone = new Date(value).getTimezoneOffset();
-
-    console.log(new Date());
-    console.log(new Date(value));
-
-    console.log(timeZone)
-
     if (value) {
       const seconds = Math.floor((+new Date() - +new Date(value)) / 1000);
       // less than 30 seconds ago will show as 'Just now'
